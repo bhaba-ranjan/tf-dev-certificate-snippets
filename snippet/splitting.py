@@ -6,12 +6,12 @@ from sklearn.model_selection import train_test_split
 # @param: Images size of individual images should be consistent
 
 def split_dataset(images, labels, train_split, shuffle):
-    train_images, train_labels, validation_images, validation_labels = train_test_split(images,
+    train_images, validation_images, train_labels, validation_labels = train_test_split(images,
                                                                                         labels,
-                                                                                        train_size=train_split,
+                                                                                        train_size= train_split,
                                                                                         stratify=labels,
-                                                                                        shuffle=shuffle)
-    return train_images, train_labels, validation_images, validation_labels
+                                                                                        shuffle= shuffle)
+    return train_images, validation_images, train_labels, validation_labels
 
 # Example use case
 # train_x, val_x, train_y, val_y = split_dataset(images=img,
