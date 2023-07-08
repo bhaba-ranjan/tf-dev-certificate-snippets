@@ -1,6 +1,7 @@
 import tensorflow as tf
 
 # Tokenizer and padding sequence basics
+# Do not pass Numworkes or OOV for language generation tasks
 numwords = 20000
 tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=numwords, oov_token='<OOV>')
 pad = tf.keras.preprocessing.sequence.pad_sequences
@@ -18,7 +19,6 @@ def find_max_len(train_seq):
 
 
 ## Tokenizer example
-
 # tokenizer.fit_on_texts(train_x)
 #
 # train_seq = tokenizer.texts_to_sequences(train_x)

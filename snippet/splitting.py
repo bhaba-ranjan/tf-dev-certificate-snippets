@@ -11,6 +11,11 @@ def split_dataset(images, labels, train_split, shuffle):
                                                                                         train_size= train_split,
                                                                                         stratify=labels,
                                                                                         shuffle= shuffle)
+    print(f'Train shape: {train_images.shape}')
+    print(f'Train labels: {train_labels.shape}')
+    print(f'Validation shape: {validation_images.shape}')
+    print(f'validation labels: {validation_labels.shape}')
+
     return train_images, validation_images, train_labels, validation_labels
 
 # Example use case
